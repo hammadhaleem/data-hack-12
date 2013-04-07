@@ -1,0 +1,11 @@
+<div class="span3">
+					<div class="well">
+					<ul id="sidenav" class="nav nav-pills nav-stacked">
+						
+					<li><a href="#tabs-side" data-toggle="tab"><strong>New and Announcements</strong></a></li>
+					<li><a href="http://hack-12-plan.herokuapp.com/profile" ><strong>Farmer Profile </strong></a></li>
+						
+					</ul>
+					</div><!-- .well -->
+					<?php include "login.php" ; ?>
+				</div><!-- .span3 -->

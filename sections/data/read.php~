@@ -1,0 +1,7 @@
+<?php 
+			  $query="SELECT `aadhar` FROM `user_crop` WHERE `aadhar`='".$_SESSION['aadhar']."'" ;
+			  $result = mysql_query($query);
+			  $row = mysql_fetch_assoc($result);
+			echo $query ; 
+			  bug($row) ; 
+?>

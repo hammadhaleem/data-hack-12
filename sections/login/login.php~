@@ -1,0 +1,67 @@
+<?php
+$red=0;
+if( (isset($_POST['aadhar']) || isset($_POST['password'] ) ) &&  isset($_GET['login'] ))
+{
+	
+	if($_POST['aadhar']!=NULL && $_POST['password']!=NULL && $_POST['aadhar']!="" &&  $_POST['password']!="" )
+			{ 
+			$pass= $_POST['password'] ;
+			$name =$_POST['aadhar'] ;
+			$en_pass=$pass;
+			  $query="SELECT `aadhar` FROM `user` WHERE `aadhar`='".$name."' and `password`='".$en_pass."'" ;
+			  $result = mysql_query($query);
+			  $row = mysql_fetch_assoc($result);
+			
+			  if ($row['aadhar'] == $name ) 
+			  	{
+					  $_SESSION['loggedin']=1 ;
+					  $_SESSION['user']=$_POST['aadhar'];
+					  $query="SELECT * FROM `user` WHERE `aadhar`	= '".$row['aadhar']."'" ;
+					  $result = mysql_query($query);
+					  $row1 = mysql_fetch_assoc($result);
+					  $_SESSION['phone']=$row1['phone'];
+					  $_SESSION['aaadhar']=$row['aadhar'];
+					  $_SESSION['fname'] =$row1['name'] ; 
+					  $_SESSION['city']=$row1['city'] ;
+					  $_SESSION['address']=$row1['add'] ;
+					  $_SESSION['district']=$row1['district'] ;
+					  $_SESSION['state']=$row1['state'] ;
+					  $_SESSION['pass']=$password ; 
+					 $red=1 ;				 
+				}
+				else 
+				{
+					echo "<h5>Try again</h5><br/><br/> " ;
+				}
+			}
+	if($_POST['aadhar']==NULL ||$_POST['aadhar'] == "" )
+			$user_val="Enter correct data " ; 
+			else
+			$user_val=$_POST['aadhar'];
+
+	if($_POST['password']==NULL ||$_POST['password'] == "" )
+			$pass_val="Enter correct data for password !!<br/> " ; 
+}
+
+					
+					 if(!isset($_SESSION['loggedin']))
+							{
+							?>
+					<form method="POST" action="http://hack-12-plan.herokuapp.com/?pid=login&login=1">
+ 					Aadhar : <input type="text" name="aadhar" size="15" value="<?php echo $user_val ; ?>" /><br />
+					Password: <input type="password" name="password" size="15" value=""/><br />
+					<?php echo $pass_val ; ?>
+ 					<input type="submit" value="Login" />
+ 					</form><? }else
+ 					{
+ 					//echo "<div class='span2'>" ;
+bug( "<strong>Welcome : ".$_SESSION['user']."<br/>First name :".$_SESSION['fname']."<br/>City   :".$_SESSION['city']."<br/><strong><a href='logout.php' >Logout</a> </strong><br/><br/>");
+ 					//echo "</div>" ; 
+ 					}
+ 					
+ 					if($red == 1 )
+ 						{
+ 							    $url = 'index.php';
+  							    echo '<META HTTP-EQUIV=Refresh CONTENT="0; URL='.$url.'">'; 
+							
+						 } ?>

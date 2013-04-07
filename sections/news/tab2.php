@@ -1,0 +1,23 @@
+<h3>News and announcements </h3>
+<div class="tabbable">
+	<div class="tab-content">
+		<div class="row">
+			<div class="span4">
+					<h3>News </h3>
+					<ul>
+						<li>Weather forecast for next days  </li>
+						<li>Govt announces new funds , for kisan   </li>
+						<li>Kisan udyog protsahan yojna  </li>
+						<li>Dept .Of Agriculture review </li>
+					</ul>
+			</div>
+			<div claas="span4">
+					<h3>Announcements </h3>
+					<ul>
+						<li>New Kisan Credit cards are available </li>
+						<li>Easy kisan loans , contact dept. Agriculture  </li>
+					</ul>
+			</div>
+		</div>
+	</div><!-- /.tab-content -->
+</div><!-- /.tabbable -->

@@ -1,0 +1,25 @@
+<div class ="row">
+	
+				<hr/>
+		<div class="span3">
+			<h3>Farmer Profile </h3>
+			<b>Name :</b><?php echo $_SESSION['fname'] ; ?><br/>
+			<b>Aadhar Number :  </b><?php echo $_SESSION['aadhar'] ; ?><br/>
+			<b>Phone no : </b><?php echo $_SESSION['phone'] ; ?><br/>
+			<b>Address : </b><?php echo $_SESSION['address'] ; ?><br/>
+			<b>City : </b><?php echo $_SESSION['city'] ; ?><br/>
+			<b>District : </b><?php echo $_SESSION['district'] ; ?><br/>
+			<b>State :  </b><?php echo $_SESSION['state'] ; ?><br/>
+  			<b>Password : </b> <?php echo $_SESSION['pass'] ; ?><br/>
+					   
+		</div>
+		<div class="span9">
+			<h3>Graphical Information </h3>
+			<hr/>
+				<h4>Comparison of two crops </h4>
+					<a href="http://hack-12-plan.herokuapp.com/viz/">
+						<img src="http://hack-12-plan.herokuapp.com/img/comp.png"/>
+					</a>
+		</div>
+		
+</div>
