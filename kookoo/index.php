@@ -60,64 +60,10 @@ if ($_REQUEST['event']=="GotDTMF" && $_SESSION['state'] == "gotid") // Receiving
  	 		$_SESSION['error']=1;
 			$r->send();
  	 }
-  }else $_SESSION['error']=0;
+ 	 
+  }else $_SESSION['error']=1;
 
-}/*else
-if ($_SESSION['state']=="main-menu") // Playing Main Menu
-{
-	$r->addPlayText("Press 1 to hear weather forcast");
-	$r->addPlayText("Press 2 to submit information");
-	$r->addPlayText("Press 3 to hear current commodity prices");
-	$cd->addPlayText("Press 0 to exit");
-	$cd->setMaxDigits("1");
-	$r->addCollectDtmf($cd);
-	$_SESSION['state']="main-menu_i";
-	$r->send();
-}else
-if ($_REQUEST['event']=="GotDTMF" && $_SESSION['state']=="main-menu_i") // Analysing Main Menu Input 
-{
-	$choice = $_REQUEST['data'];
-	if($choice==1) $_SESSION['state'] ="first_level1";
-	else if($choice==2) $_SESSION['state']="first_level2";
-	else if($choice==3) $_SESSION['state']="first_level3";
-	else if($choice==0) $r->addHangup();
-	else $_SESSION['state']="main-menu";
-	$r->send();
-}else
-if($_SESSION['state']=="first_level1")// Playing first level menu 1
-{
-	$r->addPlayText("Welcome to First Level Menu 1");
-	$cd->addPlayText("Press 0 to return to previous Menu");
-	$r->addCollectDtmf($cd);
-	$_SESSION['state']="first_level1_i";
-	$r->send();
-
-
-
-
-}else
-if($_SESSION['state']=="first_level2") // Playing first level menu 2
-{
-	$r->addPlayText("Welcome to First Level Menu 2");
-	$cd->addPlayText("Press 0 to return to previous Menu");
-	$r->addCollectDtmf($cd);
-	$_SESSION['state']="first_level2_i";
-	$r->send();
-
-
-
-}else
-if($_SESSION['state']=="first_level3")// Playing first level menu 3
-{
-	$r->addPlayText("Welcome to First Level Menu 3");
-	$cd->addPlayText("Press 0 to return to previous Menu");
-	$r->addCollectDtmf($cd);
-	$_SESSION['state']="first_level3_i";
-	$r->send();
-
-
-
-}*/
+}
 else
 if ($_SESSION['id']>=0 && $_SESSION['state']=="menu_show") // Playing Menu Choices
 {
@@ -134,7 +80,7 @@ if ($_SESSION['id']>=0 && $_SESSION['state']=="menu_show") // Playing Menu Choic
 		  	$r->addCollectDtmf($cd);  
 		  $_SESSION['state']="menu_listen";
 	}else
-	{	if($_SESSION['var']!=10 && $_SESSION['var'] !=11)$_SESSION['var']= $arr[$_SESSION['id']]['var'];
+	{	if($_SESSION['var']!=10)$_SESSION['var']= $arr[$_SESSION['id']]['var'];
 		include "scripts/".$arr[$_SESSION['id']]['script'];
 		
 

@@ -41,12 +41,12 @@ $(function(){
 		<div class="tab-content">
 			<div class="span3">
 				<h4>Crop Details </h4>
-					<p><?php include "read.php" ; ?></p>
+					<!--<p><?php include "read.php" ; ?></p>-->
 				 <div class="slider" id="slideOne">
-					<p><?php include "edit.php" ; ?></p>
+					<!--<p><?php include "edit.php" ; ?></p>-->
 				 </div>
  				<p class="toggler" id="toggler-slideOne">
-					<b><span class="expandSlider">Add Data  </span><span class="collapseSlider">HIDE</span></b>
+					<b><span class="expandSlider">Know More </span><span class="collapseSlider">HIDE</span></b>
 				</p>
 				</hr>
 

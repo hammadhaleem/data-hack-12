@@ -247,8 +247,8 @@
           <img src="http://hack-12-plan.herokuapp.com/img/grass.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Whats next </h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1>Kisan Soochna Sewa </h1>
+              <p class="lead"> An Information Portal built and designed specifically for the welfare and growth of Farmers</p>
               <a class="btn btn-large btn-primary" href="http://hack-12-plan.herokuapp.com/login">Register up today / Login </a>
             </div>
           </div>
@@ -258,9 +258,9 @@
           <img src="http://hack-12-plan.herokuapp.com/img/hand.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+              <h1>One more for good measure</h1>
+              <p class="lead">The Kisan Soochna Sewa comprises of a dynamic web application and a dedicated IVRS service to cater to their needs. Dial 011 -30715373 now to benefit from this scheme</p>
+              <a class="btn btn-large btn-primary" href="#">Call now</a>
             </div>
           </div>
         </div>

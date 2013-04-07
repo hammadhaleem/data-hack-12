@@ -12,6 +12,8 @@ if ( $_SESSION['var'] == 0 ) {
 }else if($_SESSION['var']==10){
 
 	$area = $_REQUEST['data'];
+  if($area!='')
+   {
  	$res=$dbh->Query("Select * from user_land WHERE aadhar='".$_SESSION['aadhar']."' ");
 
  	 if(mysql_num_rows($res)>=1){ 
@@ -26,6 +28,7 @@ if ( $_SESSION['var'] == 0 ) {
  	 $_SESSION['id']= $arr[$_SESSION['id']]['pid'];
  	 if($res) $r->addPlayText("Land area successfully submitted"); 
  	 	else { $r->addPlayText("Sorry, there seems to be some problem");   }
+  }
 }
 else
 if ( $_SESSION['var'] == 1 ) {

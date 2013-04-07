@@ -50,7 +50,15 @@ $(function(){
 				</p>
 				</hr>
 
-				
+				<h4>Domestic Animals  </h4>
+					<p><?php include "read_a.php" ; ?></p>
+				 <div class="slider" id="slideOne">
+					<p><?php include "edit_a.php" ; ?></p>
+				 </div>
+ 				<p class="toggler" id="toggler-slideOne">
+					<b><span class="expandSlider">Know More </span><span class="collapseSlider">HIDE</span></b>
+				</p>
+				</hr>
 			</div>
 			<div class="span3">
 				<ul>
