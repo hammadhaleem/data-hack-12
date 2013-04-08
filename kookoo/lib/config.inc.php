@@ -31,8 +31,8 @@ define("TB_COUNTRY", "country");
 
 
 	define("MYSQL_SERVER","atlas.nseasy.com");	
-	define("MYSQL_USER","thinkdif");
-	define("MYSQL_PASS","kgggdkp@1234");
+	define("MYSQL_USER","########333");
+	define("MYSQL_PASS","###########3");
 	define("MYSQL_DB","thinkdif_plan12");
 	define("RDBMS","MYSQL");
 
