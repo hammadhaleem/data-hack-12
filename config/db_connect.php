@@ -1,6 +1,6 @@
 <?php 
 	try {
-		mysql_connect("atlas.nseasy.com", "thinkdif", "kgggdkp@1234");
+		mysql_connect("atlas.nseasy.com", "##########", "#################");
 	}catch (Exception $e) 
 	{ 
 		echo " database not connected " ; 
